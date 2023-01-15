@@ -1,0 +1,52 @@
+html {
+  @include main_copy_font;
+  color: $base_text_color;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: normal;
+  height: 100%;
+}
+
+a {
+  color: $base_link_color;
+  transition: all 0.1s ease-in-out;
+  text-decoration-color: $decoration_transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover_link_color;
+    transition: all 0.1s ease-in-out;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include main_copy_font;
+  color: $base_headings_color;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+
+h2 {
+  font-size: 2.188rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

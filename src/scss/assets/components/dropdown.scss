@@ -1,0 +1,16 @@
+.dropdown {
+  background: $pampas;
+  border-radius: 10px;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  &__position--absolute {
+    position: absolute;
+    z-index: 500;
+    padding: 0;
+    border-radius: 5px;
+  }
+}

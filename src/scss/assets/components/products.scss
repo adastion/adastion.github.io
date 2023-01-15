@@ -1,0 +1,162 @@
+.products {
+  margin-bottom: 20px;
+
+  &__list {
+
+    @include phone_and_bigger {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2.3%;
+      left: -2.2%;
+      width: 104.4%;
+      height: 118.6%;
+      z-index: 4;
+
+      @include desktop_and_bigger {
+        left: -4.4%;
+        width: 109.5%;
+      }
+    }
+
+    &:hover {
+      z-index: 100;
+
+      &::before {
+        background: $white;
+        opacity: 0.2;
+        border-radius: 10px;
+        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.18);
+      }
+
+      .products__pic {
+        z-index: 250;
+      }
+    }
+
+    @include phone_and_bigger {
+      max-width: 48.9%;
+    }
+
+    &:not(:nth-child(even)) {
+      
+      @include phone_and_bigger {
+        margin-right: 2.2%;
+      }
+    }
+
+    @include desktop_and_bigger {
+      max-width: 23.35%;
+    }
+
+    &:not(:nth-child(4n)) {
+      @include desktop_and_bigger {
+        margin-right: 2.2%;
+      }
+    }
+  }
+
+  &__item:hover &__overlay {
+    display: block;
+  }
+
+  &__pic {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 20px;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  &__pic--hit {
+    
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/svg/hit.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      max-width: 26%;
+      max-height: 26%;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      z-index: 5;
+    }
+  }
+
+  &__img {
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 6;
+  }
+
+  &__price {
+    position: absolute;
+    top: 75%;
+    color: $white;
+    font-size: calc((100vw - 320px) / (545 - 320) * (70 - 30) + 30px);
+
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
+    width: 100%;
+
+    @include phone_and_bigger {
+      font-size: calc((100vw - 545px) / (768 - 545) * (47 - 27) + 27px);
+    }
+
+    @include tablet_and_bigger {
+      font-size: calc((100vw - 768px) / (1024 - 768) * (67 - 47) + 47px);
+    }
+
+    @include desktop_and_bigger {
+      font-size: 30px;
+    }
+  }
+
+  &__quantity {
+    font-size: calc((100vw - 320px) / (545 - 320) * (85 - 45) + 45px);
+
+    @include phone_and_bigger {
+      font-size: calc((100vw - 545px) / (768 - 545) * (62 - 42) + 42px);
+    }
+
+    @include tablet_and_bigger {
+      font-size: calc((100vw - 768px) / (1024 - 768) * (82 - 62) + 62px);
+    }
+
+    @include desktop_and_bigger {
+      font-size: 45px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px;
+    z-index: 180;
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    display: none;
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+}

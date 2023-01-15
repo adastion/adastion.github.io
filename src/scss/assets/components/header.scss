@@ -1,0 +1,19 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 10px;
+
+	@include tablet_and_bigger {
+		flex-direction: row;
+		padding-bottom: 0;
+	}
+
+	&__logo {
+		margin-top: 10px;
+	}
+	
+	&__link {
+		text-decoration: none;
+	}
+}

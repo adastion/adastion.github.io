@@ -1,0 +1,198 @@
+.navigation {
+  margin: 10px 0;
+
+  @include phone_and_bigger {
+    width: 100%;
+  }
+
+  @include desktop_and_bigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  &__buttons-left {
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 2;
+
+    @include desktop_and_bigger {
+      margin-bottom: 0;
+      margin-left: 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include phone_and_bigger {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include tablet_and_bigger {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: inherit;
+    margin-bottom: 5px;
+
+    @include phone_and_bigger {
+      width: initial;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+
+    &:hover .menu {
+      display: block;
+    }
+
+    &:active .menu {
+      display: block;
+    }
+  }
+
+  &__btn-left {
+    color: $white;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    height: 32px;
+    text-decoration: underline;
+    text-decoration-color: $decoration_transparent;
+    background: none;
+    padding: 10px 15px;
+    margin: 0 auto;
+
+    @include phone_and_bigger {
+      margin: 0;
+    }
+
+    &:hover {
+      color: $mine_shaft;
+      background: $white;
+      text-decoration: none;
+    }
+
+    &:active {
+      background: $gallery;
+      box-shadow: inset 0 2px 1px $dove_gray;
+    }
+  }
+
+  &__btn-left--active {
+    color: $white;
+    background: $chestnut_rose;
+    text-decoration: none;
+  }
+
+  &__buttons-right {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__list-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include phone_and_bigger {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include tablet_and_bigger {
+      justify-content: flex-end;
+    }
+  }
+
+  &__item-btn {
+    position: relative;
+    margin-bottom: 2px;
+
+    &:not(:last-child) {
+      
+      @include phone_and_bigger {
+        margin-right: 10px;
+      }
+    }
+
+    &:hover .search {
+      display: block;
+    }
+
+    &:hover .login {
+      display: block;
+    }
+
+    &:hover .basket {
+      display: block;
+    }
+  }
+
+  &__btn-right {
+    fill: $white;
+    color: $white;
+    font-weight: 500;
+    background: $transparent;
+    height: 32px;
+    padding: 0 15px;
+
+    &:hover {
+      color: $mine_shaft;
+      fill: $mine_shaft;
+      background: $pampas;
+    }
+  }
+
+  &__btn-right--full {
+    color: $mine_shaft;
+    background: $pampas;
+
+    .navigation__basket {
+      display: none;
+    }
+
+    .navigation__basket-full {
+      display: block;
+    }
+
+    .navigation__number-full {
+      display: block;
+    }
+  }
+
+  &__btn-right--size {
+    width: 32px;
+    padding: 0;
+  }
+
+  &__svg {
+    display: flex;
+    margin-right: 8px;
+  }
+
+  &__search {
+    margin-right: 0;
+    position: relative;
+    left: 8px;
+  }
+
+  &__basket-full {
+    display: none;
+  }
+
+  &__number-full {
+    margin-right: 8px;
+    display: none;
+  }
+}

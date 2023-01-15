@@ -1,0 +1,147 @@
+.cards {
+  color: $white;
+  margin-bottom: 20px;
+  position: relative;
+
+  &__list {
+    @include tablet_and_bigger {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    padding: 20px;
+    background: url("../images/malina.jpg") no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet_and_bigger {
+      max-width: 48.9%;
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+
+      @include tablet_and_bigger {
+        margin-right: 2.2%;
+      }
+    }
+  }
+
+  &__item--bg-chocolate {
+    background: url("../images/chocolate.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  &__item--news {
+    color: $mine_shaft;
+    background: url("../images/strawberry.jpg");
+    background-position: left;
+    font-weight: 700;
+    text-align: center;
+
+    @include tablet_and_bigger {
+      text-align: start;
+    }
+  }
+
+  &__text--news {
+    margin-bottom: 10px;
+  }
+
+  &__item--mailing {
+    color: $scorpion;
+    align-items: center;
+    border-radius: 10px;
+    background: repeating-linear-gradient(
+      -45deg,
+      $pampas,
+      $pampas 10px,
+      $anakiwa 10px,
+      $anakiwa 20px,
+      $pampas 20px,
+      $pampas 30px,
+      $mona_lisa 30px,
+      $mona_lisa 40px
+    );
+    padding: 6px;
+  }
+
+  &__item--mailing-wrap {
+    background: $pampas;
+    border-radius: 10px;
+    height: 100%;
+    padding: 35px 20px;
+  }
+
+  &__mailing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include phone_and_bigger {
+      flex-direction: row;
+    }
+  }
+
+  &__mailing--input {
+    margin-bottom: 20px;
+    width: 100%;
+
+    @include phone_and_bigger {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+
+  &__text--mailing {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include phone_and_bigger {
+      text-align: start;
+    }
+  }
+
+  &__title {
+    color: inherit;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 40px;
+  }
+
+  &__link-wrap {
+    margin: 0 auto;
+    margin-bottom: 148px;
+    max-width: 100%;
+    
+    @include phone_and_bigger {
+      margin-bottom: 120px;
+    }
+
+    @include tablet_and_bigger {
+      max-width: 280px;
+      margin: 0;
+    }
+  }
+
+  &__link {
+    color: $black;
+    font-size: 24px;
+  }
+
+  &__btn {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+}

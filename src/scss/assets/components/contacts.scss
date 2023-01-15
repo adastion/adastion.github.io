@@ -1,0 +1,19 @@
+.contacts {
+	color: $white;
+	text-align: center;
+	font-weight: 700;
+
+	@include tablet_and_bigger {
+		text-align: end;
+	}
+
+		&__text {
+			font-size: 14px;
+			position: relative;
+			z-index: 0;
+		}
+
+		&__text--size {
+			font-size: 22px;
+		}
+}

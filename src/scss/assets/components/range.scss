@@ -1,0 +1,44 @@
+.range {
+  width: 100%;
+  height: 3px;
+  background: $transparent;
+
+  &__toggle {
+    position: relative;
+  }
+
+  &__toggle-min {
+
+    &:before {
+      position: absolute;
+      top: -8.5px;
+      left: 18%;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("../images/svg/filter-button.svg");
+      background-repeat: no-repeat;
+      z-index: 5;
+      cursor: pointer;
+    }
+  }
+
+  &__toggle-max {
+    width: 60%;
+    height: 3px;
+    margin-left: 19%;
+    background: $white;
+
+    &::after {
+      position: absolute;
+      top: -8.5px;
+      left: 90%;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("../images/svg/filter-button.svg");
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.search {
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+
+  @include tablet_and_bigger {
+    left: -320px;
+    transform: none;
+  }
+
+  &__input {
+    margin: 20px;
+
+    @include tablet_and_bigger {
+      width: 310px;
+    }
+  }
+}
+
+.login {
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+
+  @include tablet_and_bigger {
+    left: -190px;
+    transform: none;
+  }
+
+  &__form {
+    margin: 20px;
+  }
+
+  &__input {
+    width: 240px;
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: $mine_shaft;
+    font-size: 13px;
+  }
+}
+
+.basket {
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  width: 300px;
+  display: none;
+
+  @include tablet_and_bigger {
+    left: -172px;
+    width: 540px;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    width: 100%;
+    margin-bottom: 15px;
+
+    &:last-of-type {
+      border-bottom: 1px solid $dusty_gray;
+    }
+
+    &::before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      content: "";
+      width: 15px;
+      height: 15px;
+      background: url("../images/svg/cross-small.svg");
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    @include tablet_and_bigger {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__item--13 {
+
+    @include tablet_and_bigger {
+      width: 13.7%;
+    }
+  }
+
+  &__item--49 {
+
+    @include tablet_and_bigger {
+      width: 49%;
+    }
+  }
+  &__item--23 {
+    
+    @include tablet_and_bigger {
+      width: 23.5%;
+    }
+  }
+
+  &__img {
+    width: 34px;
+    border-radius: 50%;
+
+    @include tablet_and_bigger {
+      margin-left: 20px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include tablet_and_bigger {
+      text-align: start;
+      margin-top: 10px;
+    }
+  }
+
+  &__color-price {
+    color: $dusty_gray;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet_and_bigger {
+      align-items: flex-end;
+    }
+  }
+
+  &__full-price {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+}

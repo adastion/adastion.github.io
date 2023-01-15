@@ -1,0 +1,62 @@
+.menu {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 400;
+  text-align: center;
+  display: none;
+
+  @include phone_and_bigger {
+    text-align: start;
+    left: 74%;
+    width: 160%;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 9px 20px;
+
+    &:first-child {
+      border-bottom: 1px solid $quill_gray;
+    }
+    
+    &:hover {
+      background: $cinderella;
+    }
+
+    &:active {
+      background: $manhattan;
+    }
+  }
+
+  &__item--active {
+    background: $chestnut_rose;
+  }
+
+  &__item--active &__text--link {
+    color: $white;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    color: $mine_shaft;
+  }
+
+  &__text--link {
+    text-decoration: none;
+
+    &:hover {
+      color: $mine_shaft;
+    }
+  }
+
+  &__text--title {
+    font-weight: 700;
+  }
+}

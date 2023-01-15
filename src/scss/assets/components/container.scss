@@ -1,0 +1,18 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.2%;
+  background: $mantle;
+
+  &--bg1 {
+    background: $mantle;
+  }
+
+  &--bg2 {
+    background: $regent_gray;
+  }
+
+  &--bg3 {
+    background: $pharlap;
+  }
+}

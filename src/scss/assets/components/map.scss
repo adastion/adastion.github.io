@@ -1,0 +1,58 @@
+.map {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__block {
+    position: relative;
+    max-width: 104.4%;
+    width: 100%;
+  }
+
+  &__google {
+    width: 100%;
+  }
+
+  &__contacts {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+    width: 100%;
+    margin: 65px 0;
+    padding: 30px 25px;
+    background: $white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include phone_and_bigger {
+      left: 97.8%;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__bold-text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 5px;
+    }
+  }
+}

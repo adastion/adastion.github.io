@@ -1,0 +1,24 @@
+.input {
+  outline: none;
+  height: 44px;
+  border: 1px solid $quill_gray;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-weight: 700;
+  line-height: 24px;
+
+  &:hover {
+    border: 1px solid $cloud;
+    outline: 1px solid $cloud;
+  }
+  
+  &:focus {
+    border: 1px solid $cornflower;
+    outline: 1px solid $cornflower;
+  }
+
+  &::placeholder {
+    color: $dusty_gray;
+    font-weight: normal;
+  }
+}
